@@ -1,94 +1,126 @@
 # School Supply Order Tracking – Logic Challenge
 
-## Objective
-Students will apply their understanding of lists, nested lists, slicing, sorting, list grouping, and logical decision-making to solve a real-world data organization problem without using code.
+# ## Objective
+# Students will apply their understanding of lists, nested lists, slicing, sorting, list grouping, and logical decision-making to solve a real-world data organization problem without using code.
 
----
+# ---
 
-## Scenario
-You are helping the main office organize student supply requests for the week. Each request includes:
+# ## Scenario
+# You are helping the main office organize student supply requests for the week. Each request includes:
 
-- Student name  
-- Item requested  
-- Quantity requested  
+# - Student name  
+# - Item requested  
+# - Quantity requested  
 
-All requests must be stored together in one organized system.
+# All requests must be stored together in one organized system.
 
----
+# ---
 
-## Student Tasks (No Coding – Logic Only)
+# ## Student Tasks (No Coding – Logic Only)
 
-### 1. Create Student Requests
-Create a collection that stores information for **3 different student requests**.  
-Each student request must include:
-- Student name  
-- Item requested  
-- Quantity requested  
+# ### 1. Create Student Requests
+# Create a collection that stores information for **3 different student requests**.  
+# Each student request must include:
+# - Student name  
+# - Item requested  
+# - Quantity requested  
 
----
 
-### 2. Identify Key Information
-From your collection:
-- Identify the **first student’s name**
-- Identify the **last student’s requested item only**
+name = input("What is your name? ")
+item = input("What is your requested item? ")
+quantity1 = int(input("What is the quantity? "))
+list1= ([name], [item], [quantity1])
+print(list1)
+requests2  = []
+name = input("What is your name? ")
+item= input("What is your requested item? ")
+quantity2= int(input("What is the quantity? "))
+list2= ([name], [item], [quantity2])
+print(list2)
+requests3  = []
+name = input("What is your name? ")
+item = input("What is your requested item? ")
+quantity3= int(input("What is the quantity? "))
+list3= ([name], [item], [quantity3])
+print(list3)
+q_list = ([quantity1], [quantity2], [quantity3])
+lists = ([list1], [list2], [q_list])
+print(list1[0])
+print(list3[1])
+print(lists[2])
 
----
 
-### 3. Quantity Extraction
-Create a **separate list that contains only the quantities requested** by the students.
+# ---
 
----
+# ### 2. Identify Key Information
+# From your collection:
+# - Identify the **first student’s name**
+# - Identify the **last student’s requested item only**
 
-### 4. Order Size Analysis
-Analyze the quantities:
-- If **any quantity is greater than 5**, label the order:
-  “Large order detected!”
-- Otherwise label the order:
-  “Orders within normal limits.”
+# ---
 
----
+# ### 3. Quantity Extraction
+# Create a **separate list that contains only the quantities requested** by the students.
 
-### 5. Quantity Organization
-Re-organize the quantity list from **smallest to largest** and display the final result.
+# ---
 
----
+# ### 4. Order Size Analysis
+# Analyze the quantities:
+# - If **any quantity is greater than 5**, label the order:
+#   “Large order detected!”
+# - Otherwise label the order:
+#   “Orders within normal limits.”
+if quantity1 > 5 or quantity2 > 5 or quantity3 > 5:
+    print("Large order detected!")
+else : 
+    print("Orders within normal limits.")
 
-## Challenge Extension: Classroom Storage Grid
 
-You are also given a grid showing classroom supply counts:
+# ---
 
-Classroom 1: 8, 12, 5  
-Classroom 2: 7, 3, 9  
-Classroom 3: 10, 6, 4  
+# ### 5. Quantity Organization
+# Re-organize the quantity list from **smallest to largest** and display the final result.
+new_sorted_list = sorted(q_list)
 
-Answer the following:
+print(f"New ordered quantities: {new_sorted_list}")
+# ---
 
-1. What is the **middle number** in the second classroom’s list?
-2. Create a new list that extracts **only the last number** from each classroom.
-3. Explain **why this information must be stored as a nested structure instead of a single list.**
+# ## Challenge Extension: Classroom Storage Grid
 
----
+# You are also given a grid showing classroom supply counts:
 
-## What This Assignment Tests
-- Understanding how grouped data is stored
-- Nested structure reasoning
-- Data extraction using position
-- Organizational logic
-- Real-world decision-making with quantities
+# Classroom 1: 8, 12, 5  
+# Classroom 2: 7, 3, 9  
+# Classroom 3: 10, 6, 4  
 
----
+# Answer the following:
 
-## Submission Requirements
-- All answers must be written in words and/or tables.
-- No programming code may be used.
-- Show clear reasoning for each response.
+# 1. What is the **middle number** in the second classroom’s list?
+# 2. Create a new list that extracts **only the last number** from each classroom.
+# 3. Explain **why this information must be stored as a nested structure instead of a single list.**
 
----
+# ---
 
-## Academic Integrity
-This is an individual logic and reasoning task. All work must be your own.
+# ## What This Assignment Tests
+# - Understanding how grouped data is stored
+# - Nested structure reasoning
+# - Data extraction using position
+# - Organizational logic
+# - Real-world decision-making with quantities
 
----
+# ---
 
-Instructor: Marvin Evins  
-Course:  AP Computer Science Principles  
+# ## Submission Requirements
+# - All answers must be written in words and/or tables.
+# - No programming code may be used.
+# - Show clear reasoning for each response.
+
+# ---
+
+# ## Academic Integrity
+# This is an individual logic and reasoning task. All work must be your own.
+
+# ---
+
+# Instructor: Marvin Evins  
+# Course:  AP Computer Science Principles  
